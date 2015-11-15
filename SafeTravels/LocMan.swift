@@ -23,7 +23,7 @@ class LocMan: NSObject, CLLocationManagerDelegate {
     
     func getGPS() -> String {
         if ((myLocation) != nil){
-        return String(myLocation.coordinate.latitude) + " " + String(myLocation.coordinate.longitude)
+        return String(myLocation.coordinate.latitude) + "+" + String(myLocation.coordinate.longitude)
         } else {
             return "GPS lcoation not available currently"
         }

@@ -34,7 +34,9 @@ class HandleConnection{
     }
     
     static func scheduleMessage(mins: Int) {
-        let gps: String = ModelHandler.lMan.getGPS()
+        var gps: String = ModelHandler.lMan.getGPS()
+        
+        gps = "http://maps.google.com/maps?z=12&t=m&q=loc:" + gps
         
         let message = ModelHandler.getMessage()
         let totalMessage = message + " " + gps

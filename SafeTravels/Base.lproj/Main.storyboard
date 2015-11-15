@@ -168,6 +168,22 @@
                                     <constraint firstAttribute="width" constant="240" id="kp7-ch-5NF"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_gear" translatesAutoresizingMaskIntoConstraints="NO" id="oVa-Qz-JcA">
+                                <rect key="frame" x="511" y="511" width="69" height="69"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="EDy-g7-moo"/>
+                                    <constraint firstAttribute="width" constant="42" id="GNy-ri-lPw"/>
+                                    <constraint firstAttribute="height" constant="69" id="klQ-hH-oTU"/>
+                                    <constraint firstAttribute="width" constant="69" id="yhL-bd-Ixx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EDy-g7-moo"/>
+                                        <exclude reference="GNy-ri-lPw"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0U-xZ-rvC">
                                 <rect key="frame" x="266" y="422" width="69" height="30"/>
                                 <animations/>
@@ -211,26 +227,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settings_gear" translatesAutoresizingMaskIntoConstraints="NO" id="oVa-Qz-JcA">
-                                <rect key="frame" x="511" y="511" width="69" height="69"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9zn-Fh-tib">
+                                <rect key="frame" x="153" y="0.0" width="295" height="89"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="EDy-g7-moo"/>
-                                    <constraint firstAttribute="width" constant="42" id="GNy-ri-lPw"/>
-                                    <constraint firstAttribute="height" constant="69" id="klQ-hH-oTU"/>
-                                    <constraint firstAttribute="width" constant="69" id="yhL-bd-Ixx"/>
+                                    <constraint firstAttribute="width" constant="295" id="0ca-R8-bOm"/>
+                                    <constraint firstAttribute="height" constant="89" id="Q3q-S2-nh1"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="EDy-g7-moo"/>
-                                        <exclude reference="GNy-ri-lPw"/>
-                                    </mask>
-                                </variation>
                             </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="9zn-Fh-tib" firstAttribute="centerX" secondItem="icG-eR-sMg" secondAttribute="centerX" id="2zl-em-RbK"/>
                             <constraint firstItem="sXb-i8-D7h" firstAttribute="top" secondItem="icG-eR-sMg" secondAttribute="bottom" constant="8" symbolic="YES" id="60I-I6-lem"/>
                             <constraint firstItem="oVa-Qz-JcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="494" id="8pa-RS-jyf"/>
                             <constraint firstItem="icG-eR-sMg" firstAttribute="trailing" secondItem="WHv-Sg-urT" secondAttribute="trailing" id="A73-E0-iXA"/>
@@ -238,6 +247,7 @@
                             <constraint firstItem="0Nv-tq-44O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="234" id="Big-cP-nsB"/>
                             <constraint firstItem="icG-eR-sMg" firstAttribute="centerX" secondItem="0Nv-tq-44O" secondAttribute="centerX" id="C2Y-MO-Hh3"/>
                             <constraint firstItem="icG-eR-sMg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="131" id="Gx0-G0-KeX"/>
+                            <constraint firstItem="icG-eR-sMg" firstAttribute="top" secondItem="9zn-Fh-tib" secondAttribute="bottom" constant="62" id="HcZ-wD-mJK"/>
                             <constraint firstItem="sXb-i8-D7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L9a-V1-WPn"/>
                             <constraint firstItem="sXb-i8-D7h" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MNJ-YE-zQs"/>
                             <constraint firstItem="0Nv-tq-44O" firstAttribute="centerX" secondItem="n0U-xZ-rvC" secondAttribute="centerX" id="OLE-Lp-BNh"/>
@@ -256,7 +266,9 @@
                             <constraint firstItem="WHv-Sg-urT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="239" id="kbD-kT-sU4"/>
                             <constraint firstItem="oVa-Qz-JcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="523" id="mIp-G2-jNV"/>
                             <constraint firstItem="sXb-i8-D7h" firstAttribute="centerX" secondItem="n0U-xZ-rvC" secondAttribute="centerX" id="p8Y-eX-O6T"/>
+                            <constraint firstItem="9zn-Fh-tib" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="97" id="rPg-op-l34"/>
                             <constraint firstAttribute="bottom" secondItem="oVa-Qz-JcA" secondAttribute="bottom" constant="20" symbolic="YES" id="rrf-Ib-q7d"/>
+                            <constraint firstItem="9zn-Fh-tib" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="s3X-kN-jjE"/>
                             <constraint firstItem="oVa-Qz-JcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="523" id="u7W-sn-df2"/>
                             <constraint firstItem="oVa-Qz-JcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="511" id="uQ1-8z-dRa"/>
                             <constraint firstItem="oVa-Qz-JcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="540" id="x8R-UB-jJH"/>
@@ -265,6 +277,8 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="rPg-op-l34"/>
+                                <exclude reference="HcZ-wD-mJK"/>
                                 <exclude reference="Big-cP-nsB"/>
                                 <exclude reference="W3c-Bk-InJ"/>
                                 <exclude reference="kbD-kT-sU4"/>
@@ -300,6 +314,7 @@
     </scenes>
     <resources>
         <image name="greenbutton" width="516" height="516"/>
+        <image name="logo" width="583" height="193"/>
         <image name="settings_gear" width="128" height="128"/>
     </resources>
 </document>
