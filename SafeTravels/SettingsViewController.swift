@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    var timerHolder: Timer!
         @IBOutlet weak var updateMessage: UIButton!
     @IBOutlet weak var numberField: UITextField!
     
@@ -34,6 +35,8 @@ class SettingsViewController: UIViewController {
 
     @IBAction func backToMenu(sender: AnyObject) {
         let view = self.storyboard?.instantiateViewControllerWithIdentifier("main") as! ViewController
+        
+        view.timer = timerHolder
         
         self.presentViewController(view, animated: true, completion: nil)
 
