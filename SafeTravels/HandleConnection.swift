@@ -39,7 +39,12 @@ class HandleConnection{
         let message = ModelHandler.getMessage()
         let totalMessage = message + " " + gps
         
-        let propMessage = totalMessage.stringByReplacingOccurrencesOfString(" ", withString: "_")
+        var prepend = ""
+        if mins > 0{
+            prepend = "Hey, something seems to be wrong. I haven't checked in in a while. "
+        }
+        
+        let propMessage = prepend + totalMessage.stringByReplacingOccurrencesOfString(" ", withString: "_")
         
         let numbers = ModelHandler.getNumbers()
         
@@ -48,10 +53,13 @@ class HandleConnection{
         
         num = num.substringToIndex(num.endIndex.predecessor())
         
+        let str = "https://konnect-ohio.herokuapp.com/futureText?numbers=" + num + "&message=" + propMessage + "&minutes=" + String(mins)
         
-        Alamofire.request(.GET, "https://konnect-ohio.herokuapp.com/futureText?numbers=" + num + "&message=" + propMessage + "&minutes=" + String(mins)).response { (request, response, data, error) in
+        let urlString = str.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        
+        Alamofire.request(.GET, urlString).response { (request, response, data, error) in
             print(response)
-            if let id = response!.allHeaderFields["X-Data-Id"] as? String {
+            if let id = response?.allHeaderFields["X-Data-Id"] as? String {
                 ModelHandler.setId(id);
             }
                 

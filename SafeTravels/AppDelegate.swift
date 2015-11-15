@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import CoreLocation
+import LocalAuthentication
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,11 +22,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ModelHandler.setUp()
         
-        let lMan = LocMan()
+        
+        let locationManager = CLLocationManager()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+        
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            locationManager.requestAlwaysAuthorization()
+        }
+        
+        let lMan = LocMan(loc: locationManager)
+        
+        locationManager.delegate = lMan
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+        
         
         ModelHandler.lMan = lMan
         
         //HandleConnection.scheduleMessage()
+        
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            locationManager.requestAlwaysAuthorization()
+        }
         
         return true
     }
@@ -42,6 +63,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        var laContext = LAContext()
+        
+        var err = NSErrorPointer()
+        
+        if laContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: err) {
+            laContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "Are you the device owner?", reply: { (boo, err) in
+                if (boo){
+                    print("im in")
+                }
+                })
+        } else {
+            print("no touch id available")
+        }
+        
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

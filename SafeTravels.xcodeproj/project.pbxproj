@@ -32,6 +32,7 @@
 		131E37EE1BF8430400078FBE /* Ids+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37EC1BF8430400078FBE /* Ids+CoreDataProperties.swift */; };
 		131E37EF1BF8430400078FBE /* Ids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37ED1BF8430400078FBE /* Ids.swift */; };
 		131E37F11BF85B4700078FBE /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37F01BF85B4700078FBE /* TimerHelper.swift */; };
+		131E37F31BF8D3D100078FBE /* BlockedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37F21BF8D3D100078FBE /* BlockedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -208,6 +209,7 @@
 		131E37EC1BF8430400078FBE /* Ids+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ids+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		131E37ED1BF8430400078FBE /* Ids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ids.swift; sourceTree = "<group>"; };
 		131E37F01BF85B4700078FBE /* TimerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
+		131E37F21BF8D3D100078FBE /* BlockedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 			children = (
 				131E37361BF8286700078FBE /* AppDelegate.swift */,
 				131E37E91BF841DD00078FBE /* LocMan.swift */,
+				131E37F21BF8D3D100078FBE /* BlockedViewController.swift */,
 				131E37381BF8286700078FBE /* ViewController.swift */,
 				131E373A1BF8286700078FBE /* Main.storyboard */,
 				131E37401BF8286700078FBE /* Assets.xcassets */,
@@ -413,6 +416,7 @@
 				TargetAttributes = {
 					131E37321BF8286700078FBE = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = RCJDD4P974;
 					};
 					131E37491BF8286700078FBE = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -599,6 +603,7 @@
 				131E37E81BF840AF00078FBE /* HandleConnection.swift in Sources */,
 				131E37D81BF833A800078FBE /* SettingsViewController.swift in Sources */,
 				131E37F11BF85B4700078FBE /* TimerHelper.swift in Sources */,
+				131E37F31BF8D3D100078FBE /* BlockedViewController.swift in Sources */,
 				131E37E61BF83C6100078FBE /* Numbers.swift in Sources */,
 				131E37EA1BF841DD00078FBE /* LocMan.swift in Sources */,
 			);
@@ -750,6 +755,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SafeTravels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -762,6 +768,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SafeTravels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

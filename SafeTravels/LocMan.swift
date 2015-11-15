@@ -14,20 +14,11 @@ class LocMan: NSObject, CLLocationManagerDelegate {
     
     var myLocation: CLLocation!
     
-    override init () {
+    init (loc: CLLocationManager) {
         super.init()
         
-        locationManager = CLLocationManager()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        }
+        locationManager = loc
         
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
-            locationManager.requestAlwaysAuthorization()
-        }
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.startUpdatingLocation()
     }
     
     func getGPS() -> String {

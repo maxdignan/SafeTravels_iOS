@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import LocalAuthentication
 
 class ViewController: UIViewController {
     
@@ -43,6 +44,7 @@ class ViewController: UIViewController {
         
         if (timer != nil){
             
+            startTimer.hidden = false
             home.hidden = false
             emergencyButton.hidden = false
             secondsLeft.hidden = false
@@ -60,8 +62,7 @@ class ViewController: UIViewController {
         print("start timer")
         
         if (timer != nil){
-            timer.stop()
-            timer = nil
+            timer.timer.invalidate()
         }
         
         home.hidden = false
@@ -85,12 +86,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var home: UIButton!
 
     @IBAction func imHome(sender: AnyObject) {
-        timer.stop();
-        timer = nil;
-        HandleConnection.cancelMessage()
-        secondsLeft.hidden = true
-        home.hidden = true
-        emergencyButton.hidden = true
+        
+        //do touch id
+        
+        let laContext = LAContext()
+        
+        let err = NSErrorPointer()
+        
+        if laContext.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, error: err) {
+            laContext.evaluatePolicy(LAPolicy.DeviceOwnerAuthenticationWithBiometrics, localizedReason: "Are you the device owner?", reply: { (boo, err) in
+                if (boo){
+                    self.timer.timer.invalidate();
+                    HandleConnection.cancelMessage()
+                    self.secondsLeft.hidden = true
+                    self.home.hidden = true
+                    self.emergencyButton.hidden = true
+                }
+                
+                if (err != nil){
+                    let v = UIAlertView(title: "You are not the owner!", message: "Please try again.", delegate: nil, cancelButtonTitle: "Cancel")
+                    
+                    v.show()
+                }
+            })
+        } else {
+            print("no touch id available")
+        }
+        
+        
+        
     }
     
     @IBOutlet weak var emergencyButton: UIButton!
@@ -142,7 +166,7 @@ class Timer{
      */
     func stop(){
         print("timer was invaidated from stop()")
-        timer.invalidate();
+
         HandleConnection.cancelMessage()
     }
     
@@ -158,13 +182,17 @@ class Timer{
         view.secondsLeft.text = String(self.duration - self.elapsedTime) + " seconds left"
         if self.elapsedTime - 1 == self.duration {
             HandleConnection.scheduleMessage(0)
-            self.stop()
+            self.timer.invalidate()
+            
+            view.secondsLeft.hidden = true
+            view.home.hidden = true
+            view.emergencyButton.hidden = true
         }
     }
     deinit{
         print("timer was invalidated from deinit()")
         self.timer.invalidate();
-        self.stop()
+        //self.stop()
     }
 }
 

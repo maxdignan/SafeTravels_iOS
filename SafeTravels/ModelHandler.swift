@@ -79,9 +79,13 @@ class ModelHandler{
         do {
             let results =
             try managedContext.executeFetchRequest(fetchRequest) as! [Messages]
-            if results.count < 1 {throw NSError(coder: NSCoder())!}
-            return (results.last?.message!)!
-        } catch let error as NSError {
+            if results.count > 0 {
+                return (results.last?.message!)!
+
+            } else {
+                return ""
+            }
+            } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
             return ""
         }
@@ -110,8 +114,12 @@ class ModelHandler{
         do {
             let results =
             try managedContext.executeFetchRequest(fetchRequest) as! [Ids]
-            if results.count < 1 {throw NSError(coder: NSCoder())!}
-            return (results.last?.id!)!
+            if results.count > 0 {
+                return (results.last?.id!)!
+            }
+            else {
+                return ""
+            }
         } catch let error as NSError {
             print("Could not fetch \(error), \(error.userInfo)")
             return ""
