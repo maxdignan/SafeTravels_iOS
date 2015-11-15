@@ -44,35 +44,43 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-Rj-GXV">
-                                <rect key="frame" x="242" y="401" width="116" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Update Message"/>
-                                <connections>
-                                    <action selector="updateMessageFunc:" destination="eUq-rf-Gd2" eventType="touchUpInside" id="2aR-l5-s8z"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Just Ten Digit Numbers" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6f-SA-CKP">
                                 <rect key="frame" x="215" y="160" width="171" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C42-tl-uzN">
+                                <rect key="frame" x="17" y="20" width="52" height="30"/>
+                                <animations/>
+                                <state key="normal" title="&lt; Menu"/>
+                                <connections>
+                                    <action selector="backToMenu:" destination="eUq-rf-Gd2" eventType="touchUpInside" id="aDS-Eo-Nmy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-Rj-GXV">
+                                <rect key="frame" x="242" y="122" width="116" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Update Message"/>
+                                <connections>
+                                    <action selector="updateMessageFunc:" destination="eUq-rf-Gd2" eventType="touchUpInside" id="2aR-l5-s8z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="EC6-3G-Ca1" firstAttribute="centerX" secondItem="TIh-Rj-GXV" secondAttribute="centerX" id="4Es-GZ-fPP"/>
                             <constraint firstItem="0mH-9F-vxH" firstAttribute="top" secondItem="B6f-SA-CKP" secondAttribute="bottom" constant="8" symbolic="YES" id="7fq-ZH-Arh"/>
                             <constraint firstItem="B6f-SA-CKP" firstAttribute="trailing" secondItem="0mH-9F-vxH" secondAttribute="trailing" id="9tZ-1J-XuS"/>
                             <constraint firstItem="EC6-3G-Ca1" firstAttribute="centerY" secondItem="GZD-kg-MMm" secondAttribute="centerY" id="AZi-o2-XUI"/>
+                            <constraint firstItem="B6f-SA-CKP" firstAttribute="top" secondItem="TIh-Rj-GXV" secondAttribute="bottom" constant="8" symbolic="YES" id="AqH-TD-zqg"/>
                             <constraint firstItem="EC6-3G-Ca1" firstAttribute="centerX" secondItem="hMe-Xq-Kte" secondAttribute="centerX" id="GUp-PH-Cbu"/>
                             <constraint firstItem="B6f-SA-CKP" firstAttribute="top" secondItem="5H9-MK-MqO" secondAttribute="bottom" constant="85" id="LgS-qP-UVw"/>
-                            <constraint firstItem="TIh-Rj-GXV" firstAttribute="top" secondItem="hMe-Xq-Kte" secondAttribute="bottom" constant="8" symbolic="YES" id="No1-Sz-Dcw"/>
                             <constraint firstItem="0mH-9F-vxH" firstAttribute="centerX" secondItem="EC6-3G-Ca1" secondAttribute="centerX" id="Q4O-22-1nK"/>
                             <constraint firstItem="hMe-Xq-Kte" firstAttribute="centerX" secondItem="GZD-kg-MMm" secondAttribute="centerX" id="XL0-bb-nbV"/>
                             <constraint firstItem="EC6-3G-Ca1" firstAttribute="leading" secondItem="GZD-kg-MMm" secondAttribute="leadingMargin" id="ZfY-DU-MW1"/>
                             <constraint firstItem="hMe-Xq-Kte" firstAttribute="top" secondItem="EC6-3G-Ca1" secondAttribute="bottom" constant="8" symbolic="YES" id="aU9-3Y-wc6"/>
+                            <constraint firstItem="TIh-Rj-GXV" firstAttribute="centerX" secondItem="B6f-SA-CKP" secondAttribute="centerX" id="bf3-sM-4ke"/>
                             <constraint firstItem="B6f-SA-CKP" firstAttribute="leading" secondItem="0mH-9F-vxH" secondAttribute="leading" id="cXb-ng-4ZG"/>
                             <constraint firstItem="EC6-3G-Ca1" firstAttribute="top" secondItem="0mH-9F-vxH" secondAttribute="bottom" constant="8" symbolic="YES" id="qHp-Ye-8CK"/>
                             <constraint firstItem="Ogp-ns-9Hv" firstAttribute="top" secondItem="hMe-Xq-Kte" secondAttribute="bottom" constant="207" id="rGi-Rd-9QM"/>
@@ -119,16 +127,69 @@
                                     <constraint firstAttribute="width" constant="97" id="nod-b7-GRW"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0U-xZ-rvC">
+                                <rect key="frame" x="266" y="416" width="69" height="30"/>
+                                <animations/>
+                                <state key="normal" title="I'M HOME"/>
+                                <connections>
+                                    <action selector="imHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XAu-66-tJ3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 seconds left" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="icG-eR-sMg">
+                                <rect key="frame" x="240" y="139" width="120" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="7tT-Qj-vRZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start/Refresh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nv-tq-44O">
+                                <rect key="frame" x="234" y="277" width="130" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="RKi-Re-P82"/>
+                                    <constraint firstAttribute="height" constant="21" id="XtQ-3N-yu6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHv-Sg-urT">
+                                <rect key="frame" x="239" y="550" width="120" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="3e9-Ru-2BB"/>
+                                    <constraint firstAttribute="height" constant="30" id="5Z5-CD-0EX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="EMERGENCY">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="emergencyCallNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="htc-Nd-eEX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="WHv-Sg-urT" firstAttribute="bottom" secondItem="oVa-Qz-JcA" secondAttribute="bottom" id="4JU-Ky-10K"/>
+                            <constraint firstItem="WHv-Sg-urT" firstAttribute="centerX" secondItem="0Nv-tq-44O" secondAttribute="centerX" id="6Bt-fr-2BZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sXb-i8-D7h" secondAttribute="bottom" constant="192" id="6DU-5o-DO9"/>
                             <constraint firstItem="sXb-i8-D7h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="148" id="GEd-WY-sQt"/>
                             <constraint firstItem="sXb-i8-D7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hmq-PE-taq"/>
+                            <constraint firstItem="n0U-xZ-rvC" firstAttribute="centerX" secondItem="sXb-i8-D7h" secondAttribute="centerX" id="USM-Kg-FIh"/>
                             <constraint firstItem="oVa-Qz-JcA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XDY-nY-Z9R"/>
                             <constraint firstItem="oVa-Qz-JcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="463" id="c5G-wW-b1l"/>
                             <constraint firstAttribute="bottom" secondItem="oVa-Qz-JcA" secondAttribute="bottom" constant="20" symbolic="YES" id="esL-zo-Q4S"/>
+                            <constraint firstItem="0Nv-tq-44O" firstAttribute="centerY" secondItem="sXb-i8-D7h" secondAttribute="centerY" id="gM7-KF-THQ"/>
+                            <constraint firstItem="WHv-Sg-urT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="239" id="kbD-kT-sU4"/>
+                            <constraint firstItem="sXb-i8-D7h" firstAttribute="top" secondItem="icG-eR-sMg" secondAttribute="bottom" constant="8" symbolic="YES" id="ntM-vZ-pPH"/>
+                            <constraint firstItem="icG-eR-sMg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="s7O-Cg-igI"/>
+                            <constraint firstItem="icG-eR-sMg" firstAttribute="centerX" secondItem="sXb-i8-D7h" secondAttribute="centerX" id="xDp-nz-zsi"/>
+                            <constraint firstItem="n0U-xZ-rvC" firstAttribute="top" secondItem="sXb-i8-D7h" secondAttribute="bottom" constant="8" symbolic="YES" id="y5D-3E-dga"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -138,6 +199,9 @@
                     </view>
                     <connections>
                         <outlet property="clickSettings" destination="oVa-Qz-JcA" id="Gc4-g1-kRc"/>
+                        <outlet property="emergencyButton" destination="WHv-Sg-urT" id="8hK-kr-PUv"/>
+                        <outlet property="home" destination="n0U-xZ-rvC" id="klo-FY-Qad"/>
+                        <outlet property="secondsLeft" destination="icG-eR-sMg" id="oS7-aL-ZgY"/>
                         <outlet property="startTimer" destination="sXb-i8-D7h" id="cXT-gS-QOk"/>
                     </connections>
                 </viewController>

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         ModelHandler.setUp()
+        
+        let lMan = LocMan()
+        
+        ModelHandler.lMan = lMan
+        
+        //HandleConnection.scheduleMessage()
         
         return true
     }

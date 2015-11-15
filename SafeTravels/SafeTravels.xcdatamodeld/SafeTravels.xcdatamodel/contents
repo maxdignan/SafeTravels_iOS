@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15B42" minimumToolsVersion="Automatic">
+    <entity name="Ids" representedClassName=".Ids" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Messages" representedClassName=".Messages" syncable="YES">
         <attribute name="message" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
@@ -9,5 +12,6 @@
     <elements>
         <element name="Messages" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="Numbers" positionX="-54" positionY="0" width="128" height="60"/>
+        <element name="Ids" positionX="-36" positionY="18" width="128" height="60"/>
     </elements>
 </model>

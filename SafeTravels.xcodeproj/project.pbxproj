@@ -27,6 +27,11 @@
 		131E37E21BF83C3B00078FBE /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37E01BF83C3B00078FBE /* Messages.swift */; };
 		131E37E51BF83C6100078FBE /* Numbers+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37E31BF83C6100078FBE /* Numbers+CoreDataProperties.swift */; };
 		131E37E61BF83C6100078FBE /* Numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37E41BF83C6100078FBE /* Numbers.swift */; };
+		131E37E81BF840AF00078FBE /* HandleConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37E71BF840AF00078FBE /* HandleConnection.swift */; };
+		131E37EA1BF841DD00078FBE /* LocMan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37E91BF841DD00078FBE /* LocMan.swift */; };
+		131E37EE1BF8430400078FBE /* Ids+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37EC1BF8430400078FBE /* Ids+CoreDataProperties.swift */; };
+		131E37EF1BF8430400078FBE /* Ids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37ED1BF8430400078FBE /* Ids.swift */; };
+		131E37F11BF85B4700078FBE /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E37F01BF85B4700078FBE /* TimerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,6 +203,11 @@
 		131E37E01BF83C3B00078FBE /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		131E37E31BF83C6100078FBE /* Numbers+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numbers+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		131E37E41BF83C6100078FBE /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
+		131E37E71BF840AF00078FBE /* HandleConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandleConnection.swift; sourceTree = "<group>"; };
+		131E37E91BF841DD00078FBE /* LocMan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocMan.swift; sourceTree = "<group>"; };
+		131E37EC1BF8430400078FBE /* Ids+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Ids+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		131E37ED1BF8430400078FBE /* Ids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ids.swift; sourceTree = "<group>"; };
+		131E37F01BF85B4700078FBE /* TimerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				131E37361BF8286700078FBE /* AppDelegate.swift */,
+				131E37E91BF841DD00078FBE /* LocMan.swift */,
 				131E37381BF8286700078FBE /* ViewController.swift */,
 				131E373A1BF8286700078FBE /* Main.storyboard */,
 				131E37401BF8286700078FBE /* Assets.xcassets */,
@@ -265,10 +276,9 @@
 				131E373D1BF8286700078FBE /* SafeTravels.xcdatamodeld */,
 				131E37D71BF833A800078FBE /* SettingsViewController.swift */,
 				131E37DD1BF83BEF00078FBE /* ModelHandler.swift */,
-				131E37DF1BF83C3B00078FBE /* Messages+CoreDataProperties.swift */,
-				131E37E01BF83C3B00078FBE /* Messages.swift */,
-				131E37E31BF83C6100078FBE /* Numbers+CoreDataProperties.swift */,
-				131E37E41BF83C6100078FBE /* Numbers.swift */,
+				131E37F01BF85B4700078FBE /* TimerHelper.swift */,
+				131E37EB1BF842D300078FBE /* CoreData */,
+				131E37E71BF840AF00078FBE /* HandleConnection.swift */,
 			);
 			path = SafeTravels;
 			sourceTree = "<group>";
@@ -317,6 +327,19 @@
 				131E37D21BF82D2600078FBE /* SwiftyJSON tvOS Tests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		131E37EB1BF842D300078FBE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				131E37EC1BF8430400078FBE /* Ids+CoreDataProperties.swift */,
+				131E37ED1BF8430400078FBE /* Ids.swift */,
+				131E37DF1BF83C3B00078FBE /* Messages+CoreDataProperties.swift */,
+				131E37E01BF83C3B00078FBE /* Messages.swift */,
+				131E37E31BF83C6100078FBE /* Numbers+CoreDataProperties.swift */,
+				131E37E41BF83C6100078FBE /* Numbers.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -568,11 +591,16 @@
 				131E37DE1BF83BEF00078FBE /* ModelHandler.swift in Sources */,
 				131E373F1BF8286700078FBE /* SafeTravels.xcdatamodeld in Sources */,
 				131E37E21BF83C3B00078FBE /* Messages.swift in Sources */,
+				131E37EF1BF8430400078FBE /* Ids.swift in Sources */,
 				131E37E51BF83C6100078FBE /* Numbers+CoreDataProperties.swift in Sources */,
 				131E37E11BF83C3B00078FBE /* Messages+CoreDataProperties.swift in Sources */,
+				131E37EE1BF8430400078FBE /* Ids+CoreDataProperties.swift in Sources */,
 				131E37371BF8286700078FBE /* AppDelegate.swift in Sources */,
+				131E37E81BF840AF00078FBE /* HandleConnection.swift in Sources */,
 				131E37D81BF833A800078FBE /* SettingsViewController.swift in Sources */,
+				131E37F11BF85B4700078FBE /* TimerHelper.swift in Sources */,
 				131E37E61BF83C6100078FBE /* Numbers.swift in Sources */,
+				131E37EA1BF841DD00078FBE /* LocMan.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

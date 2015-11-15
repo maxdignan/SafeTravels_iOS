@@ -28,8 +28,16 @@ class SettingsViewController: UIViewController {
         
         ModelHandler.addNumber(numberField.text!)
         
+        numberField.text = ""
+        
     }
 
+    @IBAction func backToMenu(sender: AnyObject) {
+        let view = self.storyboard?.instantiateViewControllerWithIdentifier("main") as! ViewController
+        
+        self.presentViewController(view, animated: true, completion: nil)
+
+    }
     @IBAction func updateMessageFunc(sender: AnyObject) {
         print(messageField.text)
         
