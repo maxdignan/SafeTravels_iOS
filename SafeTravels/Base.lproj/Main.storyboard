@@ -3,12 +3,100 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="scS-pE-nOp">
+            <objects>
+                <viewController storyboardIdentifier="settings" id="eUq-rf-Gd2" customClass="SettingsViewController" customModule="SafeTravels" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5H9-MK-MqO"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ogp-ns-9Hv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GZD-kg-MMm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0mH-9F-vxH">
+                                <rect key="frame" x="215" y="198" width="171" height="30"/>
+                                <animations/>
+                                <state key="normal" title="+ Add a Friend's Number"/>
+                                <connections>
+                                    <action selector="addFriend:" destination="eUq-rf-Gd2" eventType="touchUpInside" id="5jo-Zq-XNQ"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EC6-3G-Ca1">
+                                <rect key="frame" x="20" y="236" width="560" height="128"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Hey friends, please check in with me. I'm on my way home, and have'nt checked into SafeTravels in a while... Here's my location: </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ Current GPS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMe-Xq-Kte">
+                                <rect key="frame" x="245" y="372" width="111" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RKT-db-vaU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-Rj-GXV">
+                                <rect key="frame" x="242" y="401" width="116" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Update Message"/>
+                                <connections>
+                                    <action selector="updateMessageFunc:" destination="eUq-rf-Gd2" eventType="touchUpInside" id="2aR-l5-s8z"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Just Ten Digit Numbers" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6f-SA-CKP">
+                                <rect key="frame" x="215" y="160" width="171" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="EC6-3G-Ca1" firstAttribute="centerX" secondItem="TIh-Rj-GXV" secondAttribute="centerX" id="4Es-GZ-fPP"/>
+                            <constraint firstItem="0mH-9F-vxH" firstAttribute="top" secondItem="B6f-SA-CKP" secondAttribute="bottom" constant="8" symbolic="YES" id="7fq-ZH-Arh"/>
+                            <constraint firstItem="B6f-SA-CKP" firstAttribute="trailing" secondItem="0mH-9F-vxH" secondAttribute="trailing" id="9tZ-1J-XuS"/>
+                            <constraint firstItem="EC6-3G-Ca1" firstAttribute="centerY" secondItem="GZD-kg-MMm" secondAttribute="centerY" id="AZi-o2-XUI"/>
+                            <constraint firstItem="EC6-3G-Ca1" firstAttribute="centerX" secondItem="hMe-Xq-Kte" secondAttribute="centerX" id="GUp-PH-Cbu"/>
+                            <constraint firstItem="B6f-SA-CKP" firstAttribute="top" secondItem="5H9-MK-MqO" secondAttribute="bottom" constant="85" id="LgS-qP-UVw"/>
+                            <constraint firstItem="TIh-Rj-GXV" firstAttribute="top" secondItem="hMe-Xq-Kte" secondAttribute="bottom" constant="8" symbolic="YES" id="No1-Sz-Dcw"/>
+                            <constraint firstItem="0mH-9F-vxH" firstAttribute="centerX" secondItem="EC6-3G-Ca1" secondAttribute="centerX" id="Q4O-22-1nK"/>
+                            <constraint firstItem="hMe-Xq-Kte" firstAttribute="centerX" secondItem="GZD-kg-MMm" secondAttribute="centerX" id="XL0-bb-nbV"/>
+                            <constraint firstItem="EC6-3G-Ca1" firstAttribute="leading" secondItem="GZD-kg-MMm" secondAttribute="leadingMargin" id="ZfY-DU-MW1"/>
+                            <constraint firstItem="hMe-Xq-Kte" firstAttribute="top" secondItem="EC6-3G-Ca1" secondAttribute="bottom" constant="8" symbolic="YES" id="aU9-3Y-wc6"/>
+                            <constraint firstItem="B6f-SA-CKP" firstAttribute="leading" secondItem="0mH-9F-vxH" secondAttribute="leading" id="cXb-ng-4ZG"/>
+                            <constraint firstItem="EC6-3G-Ca1" firstAttribute="top" secondItem="0mH-9F-vxH" secondAttribute="bottom" constant="8" symbolic="YES" id="qHp-Ye-8CK"/>
+                            <constraint firstItem="Ogp-ns-9Hv" firstAttribute="top" secondItem="hMe-Xq-Kte" secondAttribute="bottom" constant="207" id="rGi-Rd-9QM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LgS-qP-UVw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="messageField" destination="EC6-3G-Ca1" id="K2x-vK-Hnd"/>
+                        <outlet property="numberField" destination="B6f-SA-CKP" id="iHa-xU-PLI"/>
+                        <outlet property="updateMessage" destination="TIh-Rj-GXV" id="Ioa-IL-fqs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4y-xn-Aeg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="-545"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SafeTravels" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="BYZ-38-t0r" customClass="ViewController" customModule="SafeTravels" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,12 +104,50 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greenbutton" translatesAutoresizingMaskIntoConstraints="NO" id="sXb-i8-D7h">
+                                <rect key="frame" x="180" y="168" width="240" height="240"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="CcY-UA-zmn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="settings_gear" translatesAutoresizingMaskIntoConstraints="NO" id="oVa-Qz-JcA">
+                                <rect key="frame" x="483" y="483" width="97" height="97"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="nod-b7-GRW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sXb-i8-D7h" secondAttribute="bottom" constant="192" id="6DU-5o-DO9"/>
+                            <constraint firstItem="sXb-i8-D7h" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="148" id="GEd-WY-sQt"/>
+                            <constraint firstItem="sXb-i8-D7h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hmq-PE-taq"/>
+                            <constraint firstItem="oVa-Qz-JcA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="XDY-nY-Z9R"/>
+                            <constraint firstItem="oVa-Qz-JcA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="463" id="c5G-wW-b1l"/>
+                            <constraint firstAttribute="bottom" secondItem="oVa-Qz-JcA" secondAttribute="bottom" constant="20" symbolic="YES" id="esL-zo-Q4S"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="c5G-wW-b1l"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="clickSettings" destination="oVa-Qz-JcA" id="Gc4-g1-kRc"/>
+                        <outlet property="startTimer" destination="sXb-i8-D7h" id="cXT-gS-QOk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="367"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="greenbutton" width="516" height="516"/>
+        <image name="settings_gear" width="128" height="128"/>
+    </resources>
 </document>
