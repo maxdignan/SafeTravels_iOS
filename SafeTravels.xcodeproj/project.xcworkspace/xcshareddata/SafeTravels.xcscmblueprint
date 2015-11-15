@@ -1,13 +1,16 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "16F34FEF7FDBE34EF140B2E704AD792018AB3AA0",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "16F34FEF7FDBE34EF140B2E704AD792018AB3AA0" : 0,
     "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 0,
     "67620B5EFA902936DF04070AF595B76AB0333747" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "E0C1CC51-FD80-48DC-9F34-DE5ADD5E2FF3",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "16F34FEF7FDBE34EF140B2E704AD792018AB3AA0" : "SafeTravels\/",
     "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "SafeTravels\/SwiftyJSON\/",
     "67620B5EFA902936DF04070AF595B76AB0333747" : "SafeTravels\/Alamofire\/"
   },
@@ -15,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SafeTravels.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:maxdignan\/SafeTravels_iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "16F34FEF7FDBE34EF140B2E704AD792018AB3AA0"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Alamofire\/Alamofire.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",

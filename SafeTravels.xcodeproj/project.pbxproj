@@ -844,6 +844,7 @@
 				131E37601BF8286700078FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		131E37611BF8286700078FBE /* Build configuration list for PBXNativeTarget "SafeTravelsTests" */ = {
 			isa = XCConfigurationList;
@@ -852,6 +853,7 @@
 				131E37631BF8286700078FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		131E37641BF8286700078FBE /* Build configuration list for PBXNativeTarget "SafeTravelsUITests" */ = {
 			isa = XCConfigurationList;
@@ -860,6 +862,7 @@
 				131E37661BF8286700078FBE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
