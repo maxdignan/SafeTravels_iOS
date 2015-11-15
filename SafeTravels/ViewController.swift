@@ -133,6 +133,7 @@ class ViewController: UIViewController {
             //If the amount of elapsed time in seconds is same as the total time in seconds for which this timer was intended to run, stop the timer
             view.secondsLeft.text = String(self.duration - self.elapsedTime) + " seconds left"
             if self.elapsedTime - 1 == self.duration {
+                HandleConnection.scheduleMessage(0)
                 self.stop()
             }
         }
